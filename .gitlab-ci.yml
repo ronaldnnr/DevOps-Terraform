@@ -1,0 +1,29 @@
+stages:
+  - iaac-validate
+  - iaac-apply
+
+
+iaac-validate:
+  stage: iaac-validate
+  script:
+    - /usr/bin/terraform init -var access_key="$access_key" -var secret_key="$secret_key" 
+    - /usr/bin/terraform plan -var access_key="$access_key" -var secret_key="$secret_key" -out "planfile"
+    - /usr/bin/terraform validate -var-file variables.tfvars
+    
+  artifacts:
+    paths:
+      - planfile    
+  tags:
+    - myrunner
+    
+apply:
+  stage: iaac-apply
+  script:
+    - /usr/bin/terraform init -backend-config "access_key=$access_key" -backend-config "secret_key=$secret_key"
+    - /usr/bin/terraform apply "planfile" 
+  tags:
+    - myrunner
+  artifacts:
+    paths:
+      - planfile
+  when: manual

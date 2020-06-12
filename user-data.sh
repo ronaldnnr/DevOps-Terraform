@@ -15,4 +15,5 @@ sudo docker login registry.gitlab.com -u ronaldnnr -p FSzmhdbxkLreXwBEnyBa
 sudo docker build -t registry.gitlab.com/ronaldnnr/globo/flask-app globo/.
 sudo docker push registry.gitlab.com/ronaldnnr/globo/flask-app:latest
 sudo docker run -it -d -p 5000:5000 registry.gitlab.com/ronaldnnr/globo/flask-app:latest
+sudo bash <(curl -Ss https://my-netdata.io/kickstart.sh)
                                 

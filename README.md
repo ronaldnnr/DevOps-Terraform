@@ -2,9 +2,9 @@
 Criação de Infraestrutura utilizando terraform para execução de API Python
 
 
-O desafio que eu resolvi é a implantação da aplicação de Comentários em versão API (backend) usando ferramentas open source da sua preferência.
+O desafio que eu resolvi é a implantação da aplicação de Comentários em versão API (backend) usando ferramentas open source da minha preferência.
 
- Preciseei criar o ambiente de execução desta API com o maior número de passos automatizados possível, inclusive a esteira de deploy.
+ Precisei criar o ambiente de execução desta API com o maior número de passos automatizados possível, inclusive a esteira de deploy.
 
 A aplicação será uma API REST que está disponível neste repositório. Através dela os internautas enviam comentários em texto de uma máteria e acompanham o que outras pessoas estão falando sobre o assunto em destaque. O funcionamento básico da API consiste em uma rota para inserção dos comentários e uma rota para listagem.
 
